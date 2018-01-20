@@ -1,0 +1,121 @@
+{
+	"info": {
+		"name": "todoapp",
+		"_postman_id": "d99ae55d-fab1-ea88-7c2d-ce2dd880b942",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Todas las tareas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:5000/tareas/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tareas",
+						""
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Crear tarea",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Hacer frontend ya!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/tareas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tareas"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Borrar tarea",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Hacer frontend ya!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/tareas/5a637a145364931d2ca896f0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tareas",
+						"5a637a145364931d2ca896f0"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar tarea",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Hacer frontend!\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:5000/tareas/5a637a715364931d2ca896f1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"tareas",
+						"5a637a715364931d2ca896f1"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -80,12 +80,12 @@ function getTasksWithStatus(req, res, status = false) {
 }
 
 function saveTask(req, res) {
-    let Task = new Task();
+    let newTask = new Task();
     let params = req.body;
 
-    Task.title = params.title;
+    newTask.title = params.title;
 
-    Task.save((err, taskStored) => {
+    newTask.save((err, taskStored) => {
         if (err) {
             res.status(500).send({
                 message: 'Error al guardar la tarea',
@@ -93,7 +93,7 @@ function saveTask(req, res) {
             });
         } else {
             res.status(200).send({
-                Task: taskStored
+                newTask: taskStored
             });
         }
     });
