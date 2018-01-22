@@ -115,7 +115,7 @@ function deleteTask(req, res) {
                     message: 'No hay tareas'
                 });
             } else{
-                Task.remove(err => {
+                task.remove(err => {
                     if (err) {
                         res.status(500).send({
                             message: 'Error al borrar la tarea',
